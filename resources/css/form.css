@@ -22,15 +22,7 @@
 .input-field label {
   color: #000;
 }
-/* label focus color */
-.input-field input[type="text"]:focus + label {
-  color: #000;
-}
-/* label underline focus color */
-.input-field input[type="text"]:focus {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000;
-}
+
 /* valid color */
 .input-field input[type="text"].valid,
 .input-field .materialize-textarea.valid {
@@ -38,7 +30,7 @@
   box-shadow: 0 1px 0 0 #000;
 }
 /* invalid color */
-.input-field input[type="text"].invalid,
+.input-field input.invalid,
 .input-field .materialize-textarea.invalid {
   border-bottom: 1px solid red;
   box-shadow: 0 1px 0 0 #000;

@@ -17,7 +17,7 @@
     <div class='input-field col s12'>
       <input class="validate {{flashMessages.has('errors.title') ? 'invalid' : ''}}" type='text' name='title' id='title' data-length="20" />
       <label for='title'>Title</label>
-      <span class="helper-text red-text" data-error="Maximum of 20 character allowed" data-success="right">
+      <span class="helper-text red-text" data-error="Maximum of 20 character allowed" >
         @if(flashMessages.has('errors.title'))
           {{flashMessages.get('errors.title')}}
         @endif
@@ -28,7 +28,7 @@
     <div class="input-field col s12">
       <textarea id="textarea1" class="validate materialize-textarea {{flashMessages.has('errors.content.maxLength') ? 'invalid' : ''}}" name="content" data-length="150"></textarea>
       <label for="textarea1">Description</label>
-        <span class="helper-text red-text" data-error="Maximum of 150 character allowed" data-success="right">
+        <span class="helper-text red-text" data-error="Maximum of 150 character allowed" >
         @if(flashMessages.has('errors.content.maxLength'))
           {{flashMessages.get('errors.content')}}
         @endif
