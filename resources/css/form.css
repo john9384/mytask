@@ -1,0 +1,49 @@
+.form {
+  flex: 1 0 auto;
+}
+
+.input-field input[type="date"]:focus + label,
+.input-field input[type="text"]:focus + label,
+.input-field input[type="email"]:focus + label,
+.input-field input[type="password"]:focus + label {
+  color: #e91e63;
+}
+
+.input-field input[type="date"]:focus,
+.input-field input[type="text"]:focus,
+.input-field input[type="email"]:focus,
+.input-field input[type="password"]:focus,
+.materialize-textarea:focus {
+  border-bottom: 2px solid #e91e63;
+  box-shadow: none;
+}
+
+/* label color */
+.input-field label {
+  color: #000;
+}
+/* label focus color */
+.input-field input[type="text"]:focus + label {
+  color: #000;
+}
+/* label underline focus color */
+.input-field input[type="text"]:focus {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* valid color */
+.input-field input[type="text"].valid,
+.input-field .materialize-textarea.valid {
+  border-bottom: 1px solid lightgreen;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* invalid color */
+.input-field input[type="text"].invalid,
+.input-field .materialize-textarea.invalid {
+  border-bottom: 1px solid red;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #000;
+}

@@ -1,0 +1,72 @@
+.add-task .btn-floating {
+  margin-left: 10px;
+}
+
+.tasks__form {
+  /* background: white; */
+  /* box-shadow: 0 0 10px 1px rgb(194, 190, 190); */
+  padding: 10px 10px;
+  /* width: 400px; */
+  border-radius: 5px;
+  margin: 20px auto;
+}
+
+.tasks__form .btn {
+  margin-left: 10px;
+}
+
+.tasks__row {
+  margin-top: 20px;
+}
+.flash-note {
+  width: 400px;
+  margin: 5px auto;
+  animation: disappear 1s 1s;
+  position: fixed;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 300px;
+}
+.card-content {
+  height: 75%;
+  overflow-y: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.card-content::-webkit-scrollbar {
+  display: none;
+}
+.card-action form {
+  display: flex;
+  justify-content: space-between;
+}
+.card-action .btn {
+  width: 45%;
+}
+#add-task {
+  position: fixed;
+  bottom: 10vh;
+  right: 10vw;
+}
+
+.no-task {
+  width: max-content;
+  margin: 20px auto;
+  text-align: center;
+}
