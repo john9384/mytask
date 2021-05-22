@@ -6,7 +6,12 @@
     @if(auth.isLoggedIn)
     <li><a href="#">{{auth.name}}</a></li>
     <li><a href="badges.html">Tasks</a></li>
-    <li><a href="collapsible.html" class="btn">Logout</a></li>
+    <li><a href="/logout" class="btn red" onclick="event.preventDefault(); document.getElementById('logout').submit()">Logout</a></li>
+    {{--  invisible logout form  --}}
+    <form id="logout" action="/logout" method="post">
+    {{ csrfField() }}
+    </form>
+
     @else
     <li><a href="/">Home</a></li>
     <li><a href="#">About Us</a></li>

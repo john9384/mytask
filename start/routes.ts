@@ -25,6 +25,7 @@ Route.get("/", "PagesController.home").as("home");
 Route.get("/signup", "AuthController.signup").as("signup");
 Route.post("/signup", "AuthController.createUser");
 Route.get("/login", "AuthController.login").as("login");
+Route.post("/logout", "AuthController.logout");
 
 Route.get("/tasks", "TasksController.index");
 Route.post("/task", "TasksController.addTask");

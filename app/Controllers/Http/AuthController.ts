@@ -28,4 +28,9 @@ export default class AuthController {
   public login({ view }: HttpContextContract) {
     return view.render("auth/login");
   }
+  public async logout({ auth, response }: HttpContextContract) {
+    await auth.logout();
+
+    return response.redirect("/");
+  }
 }
