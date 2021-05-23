@@ -35,7 +35,6 @@ export default class AuthController {
     response,
   }: HttpContextContract) {
     const { email, password } = request.all();
-    console.log(email, password);
     try {
       await auth.attempt(email, password);
 
