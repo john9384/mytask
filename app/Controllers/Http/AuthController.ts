@@ -28,6 +28,24 @@ export default class AuthController {
   public login({ view }: HttpContextContract) {
     return view.render("auth/login");
   }
+  public async authenticate({
+    request,
+    auth,
+    session,
+    response,
+  }: HttpContextContract) {
+    const { email, password } = request.all();
+    console.log(email, password);
+    try {
+      await auth.attempt(email, password);
+
+      return response.redirect("/tasks");
+    } catch (err) {
+      session.flash("notification", "We couldn't verify your credentials.");
+
+      return response.redirect("back");
+    }
+  }
   public async logout({ auth, response }: HttpContextContract) {
     await auth.logout();
 
